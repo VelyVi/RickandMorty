@@ -1,0 +1,31 @@
+.search {
+	max-width: 350px;
+	width: 100%;
+	margin: 2.5rem auto 2rem;
+	display: grid;
+	grid-template-columns: 1fr 0.25fr;
+}
+.search__input {
+	border: none;
+	background-color: #ffff00;
+	border-radius: 8px 0 0 8px;
+	padding: 0.5rem 0.75rem;
+	font-size: 1rem;
+	outline: none;
+}
+
+.search__btn {
+	border: none;
+	color: #fff;
+	background-color: rgb(104, 146, 18);
+	border-radius: 0 8px 8px 0;
+	padding: 0.5rem 0.75rem;
+	font-size: 1rem;
+	outline: none;
+}
+
+.message__error {
+	text-align: center;
+	color: #fff;
+	margin-bottom: 2rem;
+}
