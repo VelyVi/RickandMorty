@@ -6,7 +6,7 @@ import Search from './Search';
 import './Card.css';
 
 function Card() {
-	const [location, setLocation] = useFetch();
+	const [location, setLocation, loading, error] = useFetch();
 	const [locationId, setLocationId] = useState(1);
 
 	useEffect(() => {
@@ -14,9 +14,22 @@ function Card() {
 	}, [locationId]);
 	return (
 		<div className="container">
-			<Search setLocationId={setLocationId} />
-			<InfoCard location={location} />
-			<ResidentsList residents={location?.residents} />
+			{loading ? (
+				<div>
+					<img src="/load-rym.gif" alt="loadrym" className="load__rym" />
+				</div>
+			) : error ? (
+				<h2 className="err__rym">
+					<img className="imgerr__rym" src="/err-rym.webp" alt="errrym" />
+					<p className="texterr">{error}</p>
+				</h2>
+			) : (
+				<>
+					<Search setLocationId={setLocationId} />
+					<InfoCard location={location} />
+					<ResidentsList residents={location?.residents} />
+				</>
+			)}
 		</div>
 	);
 }

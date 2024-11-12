@@ -11,7 +11,7 @@ function Search({ setLocationId }) {
 		const id = parseInt(inputRef.current.value);
 
 		if (isNaN(id)) {
-			setError('You must provide a valid number');
+			setError('You must provide a valid number 🥺');
 			setTimeout(() => {
 				setError('');
 			}, 4000);
@@ -19,7 +19,7 @@ function Search({ setLocationId }) {
 		}
 
 		if (id < 1 || id > 126) {
-			setError('Hey! You must provide an id from 1 to 126');
+			setError('Hey! You must provide a number from 1 to 126 🥺');
 			setTimeout(() => {
 				setError('');
 			}, 4000);
@@ -35,7 +35,7 @@ function Search({ setLocationId }) {
 				<input ref={inputRef} type="text" className="search__input" />
 				<button className="search__btn">Search</button>
 			</form>
-			<p className="message__error">{error && error}</p>
+			<p className="message__error"> {error && error}</p>
 		</>
 	);
 }

@@ -4,10 +4,15 @@
 	margin: 2.5rem auto 2rem;
 	display: grid;
 	grid-template-columns: 1fr 0.25fr;
+
+	&:hover {
+		box-shadow: 0 0 13px 0 #ffff0056;
+		transition: 0.5s;
+	}
 }
 .search__input {
 	border: none;
-	background-color: #ffff00;
+	background-color: #ffff00af;
 	border-radius: 8px 0 0 8px;
 	padding: 0.5rem 0.75rem;
 	font-size: 1rem;
@@ -17,11 +22,23 @@
 .search__btn {
 	border: none;
 	color: #fff;
+	transition: 0.5s;
 	background-color: rgb(104, 146, 18);
 	border-radius: 0 8px 8px 0;
 	padding: 0.5rem 0.75rem;
 	font-size: 1rem;
 	outline: none;
+
+	&:hover {
+		color: #7fffd4;
+		transition: 0.5s;
+		cursor: pointer;
+		box-shadow: 0 0 15px 0 #20adad8b;
+	}
+
+	&:focus {
+		color: #00ffff;
+	}
 }
 
 .message__error {
