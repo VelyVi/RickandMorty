@@ -11,5 +11,40 @@
 
 .load__rym {
 	display: flex;
+	justify-content: center;
 	align-items: center;
+}
+
+button {
+	border-radius: 6px;
+	border: 1px solid transparent;
+	padding: 0.6rem 1.2rem;
+	font-size: 1rem;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a8a;
+	cursor: pointer;
+	transition: border-color 0.4s;
+	transition: box-shadow 0.4s;
+}
+
+.btns {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btns__info {
+	display: flex;
+	justify-content: center;
+}
+
+button:hover {
+	border-color: #64fffa;
+	box-shadow: 0 0 10px 0 #64fffa;
+}
+
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
 }

@@ -11,6 +11,9 @@
 	}
 }
 .search__input {
+	color: #fff;
+	font-family: inherit;
+	font-weight: 625;
 	border: none;
 	background-color: #ffff00af;
 	border-radius: 8px 0 0 8px;
